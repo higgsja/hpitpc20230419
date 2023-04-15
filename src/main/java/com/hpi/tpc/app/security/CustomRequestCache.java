@@ -1,9 +1,8 @@
 package com.hpi.tpc.app.security;
 
-import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.springframework.security.web.savedrequest.*;
 
 /**
  * HttpSessionRequestCache that avoids saving internal framework requests.
