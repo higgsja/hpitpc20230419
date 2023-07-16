@@ -5,7 +5,7 @@
     <artifactId>hpitpc</artifactId>
     <version>1.0</version>
     <name>TPC</name>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <vaadin.version>23.3.4</vaadin.version>
@@ -14,7 +14,7 @@
         <!--<vaadin.version>21.0.7</vaadin.version>-->
         <!--have to do here to override spring parent specification of 9.0.5.3-->
         <tomcat.version>9.0.53</tomcat.version>
-        <maven.version>3.8.6</maven.version>
+        <maven.version>3.8.4</maven.version>
         <!--<maven.version>3.8.2</maven.version>-->
         <maven.enforcer.version>3.0.0</maven.enforcer.version>
         <maven.compiler.source>17</maven.compiler.source>
@@ -187,7 +187,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
