@@ -5,7 +5,7 @@
     <artifactId>hpitpc</artifactId>
     <version>1.0</version>
     <name>TPC</name>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <properties>
         <vaadin.version>23.3.4</vaadin.version>
@@ -191,7 +191,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
-            <!--<scope>provided</scope>-->
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
