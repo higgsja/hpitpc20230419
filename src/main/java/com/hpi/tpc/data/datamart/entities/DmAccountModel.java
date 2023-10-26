@@ -13,7 +13,7 @@ import lombok.*;
  */
 public class DmAccountModel {
 
-    public static final String SQL_DMOFX_ACCOUNTS_ALL;
+//    public static final String SQL_DMOFX_ACCOUNTS_ALL;
     public static final String SQL_DMOFX_ACCOUNTS_EXISTS;
     public static final String SQL_DMOFX_ACCOUNTS_INSERT;
     public static final String SQL_DMOFX_ACCOUNTS_UPDATE;
@@ -37,8 +37,8 @@ public class DmAccountModel {
     private String pwd;
 
     static {
-        SQL_DMOFX_ACCOUNTS_ALL =
-            "select mAc.BrokerId, mAc.DMAcctId, mAc.AcctId, mAc.Org, mAc.dmOfxFId, mAc.BrokerIdFi, mAc.InvAcctIdFi, mAc.UserId, decode(mAc.Pwd, 'cpt/moc.iph') as Pwd, mCa.ClientAcctName, mCa.Active from hlhtxc5_dbOfx.Accounts as bAc, hlhtxc5_dbOfx.Brokers as bBr, hlhtxc5_dmOfx.Accounts as mAc, hlhtxc5_dmOfx.ClientAccts as mCa where bAc.BrokerId = bBr.BrokerId and bAc.BrokerId = mAc.BrokerId and bAc.AcctId = mAc.AcctId and bAc.JoomlaId = mAc.JoomlaId and mAc.DMAcctId = mCa.DMAcctId and bAc.JoomlaId = mCa.JoomlaId and bAc.JoomlaId = '%s'";
+//        SQL_DMOFX_ACCOUNTS_ALL =
+//            "select mAc.BrokerId, mAc.DMAcctId, mAc.AcctId, mAc.Org, mAc.dmOfxFId, mAc.BrokerIdFi, mAc.InvAcctIdFi, mAc.UserId, decode(mAc.Pwd, 'cpt/moc.iph') as Pwd, mCa.ClientAcctName, mCa.Active from hlhtxc5_dbOfx.Accounts as bAc, hlhtxc5_dbOfx.Brokers as bBr, hlhtxc5_dmOfx.Accounts as mAc, hlhtxc5_dmOfx.ClientAccts as mCa where bAc.BrokerId = bBr.BrokerId and bAc.BrokerId = mAc.BrokerId and bAc.AcctId = mAc.AcctId and bAc.JoomlaId = mAc.JoomlaId and mAc.DMAcctId = mCa.DMAcctId and bAc.JoomlaId = mCa.JoomlaId and bAc.JoomlaId = '%s'";
 //            "select bAc.BrokerId, bAc.AcctId, bBr.Org, mCa.ClientAcctName, mCa.Active from hlhtxc5_dbOfx.Accounts as bAc, hlhtxc5_dbOfx.Brokers as bBr, hlhtxc5_dmOfx.Accounts as mAc, hlhtxc5_dmOfx.ClientAccts as mCa where bAc.BrokerId = bBr.BrokerId and bAc.BrokerId = mAc.BrokerId and bAc.AcctId = mAc.AcctId and bAc.JoomlaId = mAc.JoomlaId and mAc.DMAcctId = mCa.DMAcctId and bAc.JoomlaId = mCa.JoomlaId and bAc.JoomlaId = '%s'";
 
     SQL_DMOFX_ACCOUNTS_EXISTS = "";
