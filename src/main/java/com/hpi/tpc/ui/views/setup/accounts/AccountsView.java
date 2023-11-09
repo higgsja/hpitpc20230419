@@ -9,8 +9,8 @@ import com.vaadin.flow.component.combobox.*;
 import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.router.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.*;
-import javax.annotation.security.*;
+import jakarta.annotation.*;
+import jakarta.annotation.security.*;
 import lombok.*;
 import org.springframework.beans.factory.annotation.*;
 

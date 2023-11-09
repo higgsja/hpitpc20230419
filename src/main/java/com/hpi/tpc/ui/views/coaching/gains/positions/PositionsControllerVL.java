@@ -3,7 +3,7 @@ package com.hpi.tpc.ui.views.coaching.gains.positions;
 import com.hpi.tpc.ui.views.baseClass.*;
 import com.vaadin.flow.router.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.Component;
 

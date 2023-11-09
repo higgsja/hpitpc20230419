@@ -5,7 +5,7 @@ import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.orderedlayout.*;
 import com.vaadin.flow.shared.*;
 import java.util.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 import lombok.*;
 
 //@UIScope

@@ -50,20 +50,22 @@ public class DataEquitiesStocksModel
 
     public void writePrefs(TwinColGrid<Attribute> twinColGrid)
     {
-        this.stringColumns = "";
-
-        twinColGrid.getSelectionGrid().getListDataView().getItems().forEachOrdered(
-            attribute ->
-        {
-            this.stringColumns += attribute + ", ";
-        }
-        );
-
-        this.stringColumns = this.stringColumns.substring(0, this.stringColumns.length() - 2);
-
-        this.prefsController.setPref(this.prefsPrefix + "Columns", this.stringColumns);
-
-        this.prefsController.writePrefsByPrefix(this.prefsPrefix + "Columns");
+        //todo: issue with twinColGrid
+        int i = 0;
+//        this.stringColumns = "";
+//
+//        twinColGrid.getSelectionGrid().getListDataView().getItems().forEachOrdered(
+//            attribute ->
+//        {
+//            this.stringColumns += attribute + ", ";
+//        }
+//        );
+//
+//        this.stringColumns = this.stringColumns.substring(0, this.stringColumns.length() - 2);
+//
+//        this.prefsController.setPref(this.prefsPrefix + "Columns", this.stringColumns);
+//
+//        this.prefsController.writePrefsByPrefix(this.prefsPrefix + "Columns");
     }
 
     public void initAttributeData()

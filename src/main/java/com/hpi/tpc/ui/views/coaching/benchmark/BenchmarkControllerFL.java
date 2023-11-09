@@ -1,16 +1,16 @@
 package com.hpi.tpc.ui.views.coaching.benchmark;
 
-import com.hpi.tpc.services.*;
 import com.hpi.tpc.ui.views.coaching.*;
 import com.hpi.tpc.ui.views.baseClass.*;
 import static com.hpi.tpc.ui.views.coaching.CoachingConst.*;
 import com.hpi.tpc.ui.views.main.*;
+import com.vaadin.flow.component.*;
 import com.vaadin.flow.router.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.*;
-import javax.annotation.security.*;
+import jakarta.annotation.*;
+import jakarta.annotation.security.*;
+import java.util.*;
 import org.springframework.beans.factory.annotation.*;
-import org.springframework.context.annotation.*;
 
 /*
  * Controller: Interface between Model and View to process business logic and incoming
@@ -88,7 +88,7 @@ public class BenchmarkControllerFL
 
         //update data
         this.benchmarkChartVL.removeAll();
-        this.benchmarkChartVL.add(this.benchMarkModel.doChart());
+        this.benchmarkChartVL.add((Collection<Component>) this.benchMarkModel.doChart());
     }
 
     @Override

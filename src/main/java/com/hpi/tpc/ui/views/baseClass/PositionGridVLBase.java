@@ -10,7 +10,7 @@ import com.vaadin.flow.data.renderer.*;
 import com.vaadin.flow.shared.*;
 import com.vaadin.flow.spring.annotation.*;
 import java.util.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 import lombok.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -66,7 +66,7 @@ public class PositionGridVLBase
         this.positionGrid.addThemeVariants(GridVariant.LUMO_ROW_STRIPES);
         this.positionGrid.setSelectionMode(Grid.SelectionMode.SINGLE);
 
-        this.positionGrid.setHeightByRows(false);
+        this.positionGrid.setAllRowsVisible(false);
         this.positionGrid.setMinWidth("360px");
         this.positionGrid.setMaxWidth("860px");
 
@@ -314,7 +314,7 @@ public class PositionGridVLBase
         if (!positionOpenTransactionModel1s.isEmpty())
         {
             gridDetails.setDataProvider(new ListDataProvider<>(positionOpenTransactionModel1s));
-            gridDetails.setHeightByRows(true);
+            gridDetails.setAllRowsVisible(true);
         }
 
         gridDetails.addColumn(PositionOpenTransactionModel1::getTransactionName)
@@ -418,7 +418,7 @@ public class PositionGridVLBase
         if (!fifoOpenTransactionModel1s.isEmpty())
         {
             gridDetails.setDataProvider(new ListDataProvider<>(fifoOpenTransactionModel1s));
-            gridDetails.setHeightByRows(true);
+            gridDetails.setAllRowsVisible(true);
         }
 
         gridDetails.addColumn(FIFOOpenTransactionModel1::getTicker)
@@ -522,7 +522,7 @@ public class PositionGridVLBase
         if (!positionClosedTransactionModel1s.isEmpty())
         {
             gridDetails.setDataProvider(new ListDataProvider<>(positionClosedTransactionModel1s));
-            gridDetails.setHeightByRows(true);
+            gridDetails.setAllRowsVisible(true);
         }
 
         gridDetails.addColumn(PositionClosedTransactionModel1::getTransactionName)

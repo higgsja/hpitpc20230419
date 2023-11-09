@@ -5,7 +5,7 @@ import com.hpi.tpc.ui.views.baseClass.*;
 import com.hpi.tpc.ui.views.main.*;
 import com.vaadin.flow.router.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.security.*;
+import jakarta.annotation.security.*;
 import lombok.*;
 
 @UIScope

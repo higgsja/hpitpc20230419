@@ -2,7 +2,7 @@ package com.hpi.tpc.ui.views.notes.notesAdd;
 
 import com.hpi.tpc.ui.views.notes.notesAddEdit.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 
 /**
  * makes direct request for data from model

@@ -15,7 +15,7 @@ import com.vaadin.flow.dom.*;
 import com.vaadin.flow.spring.annotation.*;
 import com.vaadin.flow.theme.lumo.*;
 import java.util.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 import lombok.*;
 import org.springframework.beans.factory.annotation.*;
 

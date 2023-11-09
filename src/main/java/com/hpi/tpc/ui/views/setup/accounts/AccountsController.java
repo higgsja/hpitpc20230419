@@ -7,7 +7,7 @@ import com.hpi.tpc.ui.views.main.*;
 import com.vaadin.flow.data.provider.*;
 import com.vaadin.flow.router.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 import lombok.*;
 import org.springframework.beans.factory.annotation.*;
 
@@ -311,7 +311,8 @@ public class AccountsController
         this.accountsModel.retrieveAllClientAccountsDataProvider();
 
         //refresh: retrieve latest data for all client accounts
-        this.accountsView.getClientFICombobox().setDataProvider(this.accountsModel.getClientFIDataProvider());
+        //this.accountsView.getClientFICombobox().setDataProvider(this.accountsModel.getClientFIDataProvider());
+        this.accountsView.getClientFICombobox().setItems(this.accountsModel.getClientFIDataProvider());
 
         this.setCtrlsEnabled();
 
@@ -554,7 +555,7 @@ public class AccountsController
         {
             //institution list changed, update and set to empty
             this.accountsView.getClientFICombobox()
-                .setDataProvider(this.accountsModel.getClientFIDataProvider());
+                .setItems(this.accountsModel.getClientFIDataProvider());
             this.accountsView.getClientFICombobox().setValue(null);
             this.accountsView.getAllAccountsCombobox().setValue(null);
         }
@@ -563,7 +564,7 @@ public class AccountsController
         {
             //clientAccounts changed
             this.accountsView.getAllAccountsCombobox()
-                .setDataProvider(this.accountsModel.getAllClientAccountsDataProvider());
+                .setItems(this.accountsModel.getAllClientAccountsDataProvider());
 
             this.accountsView.getAllAccountsCombobox().setValue(null);
         }
@@ -583,11 +584,11 @@ public class AccountsController
 
             //refresh comboboxes
             this.accountsView.getClientFICombobox()
-                .setDataProvider(this.accountsModel.getClientFIDataProvider());
+                .setItems(this.accountsModel.getClientFIDataProvider());
             this.accountsView.getClientFICombobox().setValue(null);
 
             this.accountsView.getAllAccountsCombobox()
-                .setDataProvider(this.accountsModel.getAllClientAccountsDataProvider());
+                .setItems(this.accountsModel.getAllClientAccountsDataProvider());
             this.accountsView.getAllAccountsCombobox().setValue(null);
 
             this.accountsModel.setBClientInstitutionsDataProviderIsDirty(false);

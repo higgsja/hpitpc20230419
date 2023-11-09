@@ -12,7 +12,7 @@ import com.vaadin.flow.shared.*;
 import com.vaadin.flow.spring.annotation.*;
 import java.text.*;
 import java.util.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 import lombok.*;
 import org.springframework.beans.factory.annotation.*;
 
@@ -165,7 +165,7 @@ public class EquitiesGridVL
         this.trackingMVCModel.getEquitiesGrid().addThemeVariants(GridVariant.LUMO_COMPACT);
         this.trackingMVCModel.getEquitiesGrid().addThemeVariants(GridVariant.LUMO_ROW_STRIPES);
         this.trackingMVCModel.getEquitiesGrid().setSelectionMode(Grid.SelectionMode.SINGLE);
-        this.trackingMVCModel.getEquitiesGrid().setHeightByRows(false);
+        this.trackingMVCModel.getEquitiesGrid().setAllRowsVisible(false);
 
         this.footer = this.trackingMVCModel.getEquitiesGrid().appendFooterRow();
 

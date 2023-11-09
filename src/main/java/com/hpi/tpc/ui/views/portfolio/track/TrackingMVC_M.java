@@ -4,7 +4,7 @@ import com.hpi.tpc.data.entities.*;
 import com.hpi.tpc.prefs.*;
 import com.vaadin.flow.component.grid.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 import lombok.*;
 import org.springframework.beans.factory.annotation.*;
 

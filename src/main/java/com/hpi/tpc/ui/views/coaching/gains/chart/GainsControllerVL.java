@@ -8,7 +8,8 @@ import com.hpi.tpc.ui.views.coaching.gains.positions.*;
 import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.router.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
+import java.util.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.Component;
 
@@ -264,7 +265,7 @@ public class GainsControllerVL
 
         if ((aCharts = this.gainsChartVL.addChart(dataTable)) != null)
         {
-            this.gainsChartVL.add(aCharts);
+            this.gainsChartVL.add((Collection<com.vaadin.flow.component.Component>) aCharts);
         }
         else{
             this.gainsChartVL.add(new Label("*** No Data Available ***"));

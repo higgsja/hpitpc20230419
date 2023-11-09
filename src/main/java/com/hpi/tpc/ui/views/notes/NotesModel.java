@@ -2,8 +2,8 @@ package com.hpi.tpc.ui.views.notes;
 
 import com.hpi.tpc.data.entities.*;
 import com.hpi.tpc.ui.views.baseClass.*;
-import com.studerw.tda.client.*;
-import com.studerw.tda.model.quote.*;
+//import com.studerw.tda.client.*;
+//import com.studerw.tda.model.quote.*;
 import com.vaadin.flow.data.binder.*;
 import com.vaadin.flow.spring.annotation.*;
 import java.util.*;
@@ -29,8 +29,8 @@ public class NotesModel
     @Getter private final BeanValidationBinder<NoteModel> binder;
 
     private final Properties props;
-    private final HttpTdaClient httpTdaClient;
-    @Getter private Quote quote;
+//    private final HttpTdaClient httpTdaClient;
+//    @Getter private Quote quote;
     @Getter @Setter private Boolean isSave;
     @Getter @Setter private Boolean isAdd;
 
@@ -46,17 +46,17 @@ public class NotesModel
 //            get(0).getHttpHost());
         props.setProperty("tda.debug.bytes.length", "-1");
 
-        this.httpTdaClient = new HttpTdaClient(props);
-
-        this.quote = null;
+//        this.httpTdaClient = new HttpTdaClient(props);
+//
+//        this.quote = null;
         this.isSave = false;
         this.isAdd = false;
     }
 
-    public Quote getTickerInfo(String ticker)
-    {
-        return this.quote = this.httpTdaClient.fetchQuote(ticker);
-    }
+//    public Quote getTickerInfo(String ticker)
+//    {
+//        return this.quote = this.httpTdaClient.fetchQuote(ticker);
+//    }
 
     public void getPrefs(String prefPrefix)
     {

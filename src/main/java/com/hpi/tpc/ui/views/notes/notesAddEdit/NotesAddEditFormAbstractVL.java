@@ -5,7 +5,7 @@ import com.hpi.tpc.ui.views.notes.NotesAddEditControlsHL;
 import com.hpi.tpc.data.entities.*;
 import com.hpi.tpc.ui.views.baseClass.*;
 import com.hpi.tpc.ui.views.notes.*;
-import com.studerw.tda.model.quote.*;
+//import com.studerw.tda.model.quote.*;
 import com.vaadin.flow.component.combobox.*;
 import com.vaadin.flow.component.orderedlayout.*;
 import com.vaadin.flow.component.textfield.*;
@@ -78,68 +78,69 @@ public abstract class NotesAddEditFormAbstractVL
 
     private Boolean checkRequired()
     {
-        if (!this.ticker.getValue().isEmpty()
-            && !this.notesModel.getQuote().getSymbol().isEmpty()
-            && !this.notesModel.getQuote().getDescription().isEmpty())
-        {
-            if (this.notesModel.getQuote() instanceof ForexQuote)
-            {
-                if (((ForexQuote) (this.notesModel.getQuote())).getLastPriceInDouble().doubleValue() > 0.0)
-                {
-                    return true;
-                }
-            }
-
-            if (this.notesModel.getQuote() instanceof FutureOptionQuote)
-            {
-                if (((FutureOptionQuote) (this.notesModel.getQuote())).getLastPriceInDouble().doubleValue() > 0.0)
-                {
-                    return true;
-                }
-            }
-
-            if (this.notesModel.getQuote() instanceof FutureQuote)
-            {
-                if (((FutureQuote) (this.notesModel.getQuote())).getLastPriceInDouble().doubleValue() > 0.0)
-                {
-                    return true;
-                }
-            }
-
-            if (this.notesModel.getQuote() instanceof OptionQuote)
-            {
-                if (((OptionQuote) (this.notesModel.getQuote())).getLastPrice().doubleValue() > 0.0)
-                {
-                    return true;
-                }
-            }
-
-            if (this.notesModel.getQuote() instanceof EquityQuote)
-            {
-                if (((EquityQuote) (this.notesModel.getQuote())).getLastPrice().doubleValue() > 0.0)
-                {
-                    return true;
-                }
-            }
-
-            if (this.notesModel.getQuote() instanceof EtfQuote)
-            {
-                if (((EtfQuote) (this.notesModel.getQuote())).getLastPrice().doubleValue() > 0.0)
-                {
-                    return true;
-                }
-            }
-
-            if (this.notesModel.getQuote() instanceof MutualFundQuote)
-            {
-                if (((MutualFundQuote) (this.notesModel.getQuote())).getClosePrice().doubleValue() > 0.0)
-                {
-                    return true;
-                }
-            }
-        }
-
-        return false;
+        return true;
+//        if (!this.ticker.getValue().isEmpty()
+//            && !this.notesModel.getQuote().getSymbol().isEmpty()
+//            && !this.notesModel.getQuote().getDescription().isEmpty())
+//        {
+//            if (this.notesModel.getQuote() instanceof ForexQuote)
+//            {
+//                if (((ForexQuote) (this.notesModel.getQuote())).getLastPriceInDouble().doubleValue() > 0.0)
+//                {
+//                    return true;
+//                }
+//            }
+//
+//            if (this.notesModel.getQuote() instanceof FutureOptionQuote)
+//            {
+//                if (((FutureOptionQuote) (this.notesModel.getQuote())).getLastPriceInDouble().doubleValue() > 0.0)
+//                {
+//                    return true;
+//                }
+//            }
+//
+//            if (this.notesModel.getQuote() instanceof FutureQuote)
+//            {
+//                if (((FutureQuote) (this.notesModel.getQuote())).getLastPriceInDouble().doubleValue() > 0.0)
+//                {
+//                    return true;
+//                }
+//            }
+//
+//            if (this.notesModel.getQuote() instanceof OptionQuote)
+//            {
+//                if (((OptionQuote) (this.notesModel.getQuote())).getLastPrice().doubleValue() > 0.0)
+//                {
+//                    return true;
+//                }
+//            }
+//
+//            if (this.notesModel.getQuote() instanceof EquityQuote)
+//            {
+//                if (((EquityQuote) (this.notesModel.getQuote())).getLastPrice().doubleValue() > 0.0)
+//                {
+//                    return true;
+//                }
+//            }
+//
+//            if (this.notesModel.getQuote() instanceof EtfQuote)
+//            {
+//                if (((EtfQuote) (this.notesModel.getQuote())).getLastPrice().doubleValue() > 0.0)
+//                {
+//                    return true;
+//                }
+//            }
+//
+//            if (this.notesModel.getQuote() instanceof MutualFundQuote)
+//            {
+//                if (((MutualFundQuote) (this.notesModel.getQuote())).getClosePrice().doubleValue() > 0.0)
+//                {
+//                    return true;
+//                }
+//            }
+//        }
+//
+//        return false;
     }
 
     public void doLayout()
@@ -152,8 +153,8 @@ public abstract class NotesAddEditFormAbstractVL
         this.notesModel.getBinder().forField(this.ticker)
             .withValidator(e ->
             {
-                Quote quote;
-                quote = null;
+//                Quote quote;
+//                quote = null;
                 if (this.notesModel.getIsSave())
                 {
                     //on save, we reset the ticker to empty 
@@ -183,94 +184,94 @@ public abstract class NotesAddEditFormAbstractVL
 
                 //only look for new quote on add; retain initial price on edit
                 //todo: this could fail on edit if the ticker no longer exists
-                try
-                {
-                    quote = this.notesModel.getTickerInfo(this.ticker.getValue());
-                } catch (RuntimeException f)
-                {
-                    this.controlsHL.getButtonAddSave().setEnabled(false);
-
-                    return false;
-                }
-
-                if (quote != null)
-                {
-                    this.inPrice = true;
-
-                    if (this.notesModel.getIsAdd())
-                    {
-                        //only update these on Add, not Edit
-                        //clear data related to previous ticker
-                        this.iPrice.setValue(0.0);
-                        this.description.setValue("");
-
-                        if (quote instanceof EquityQuote equityQuote1)
-                        {
-                            this.iPrice.setValue((equityQuote1.getLastPrice()).doubleValue());
-                            this.description.setValue(equityQuote1.getDescription());
-                        }
-
-                        if (quote instanceof EtfQuote etfQuote1)
-                        {
-
-                            this.iPrice.setValue((etfQuote1.getLastPrice()).doubleValue());
-                            this.description.setValue(etfQuote1.getDescription());
-                        }
-
-                        if (quote instanceof MutualFundQuote mfQuote1)
-                        {
-
-                            this.iPrice.setValue((mfQuote1.getClosePrice()).doubleValue());
-                            this.description.setValue(mfQuote1.getDescription());
-                        }
-
-                        if (quote instanceof IndexQuote idxQuote1)
-                        {
-
-                            this.iPrice.setValue((idxQuote1.getLastPrice()).doubleValue());
-                            this.description.setValue(idxQuote1.getDescription());
-                        }
-
-                        if (quote instanceof FutureQuote futureQuote1)
-                        {
-
-                            this.iPrice.setValue((futureQuote1.getLastPriceInDouble()).doubleValue());
-                            this.description.setValue(futureQuote1.getDescription());
-                        }
-
-                        if (quote instanceof FutureOptionQuote futureOptionQuote1)
-                        {
-
-                            this.iPrice.setValue((futureOptionQuote1.getLastPriceInDouble()).doubleValue());
-                            this.description.setValue(futureOptionQuote1.getDescription());
-                        }
-
-                        if (quote instanceof ForexQuote forexQuote1)
-                        {
-
-                            this.iPrice.setValue((forexQuote1.getLastPriceInDouble()).doubleValue());
-                            this.description.setValue(forexQuote1.getDescription());
-                        }
-                    }
-
-//                    this.iPrice.setValue((equityQuote.getLastPrice()).doubleValue());
-//                    this.description.setValue(equityQuote.getDescription());
-                    if (this.checkRequired())
-                    {
-                        this.controlsHL.getButtonAddSave().setEnabled(true);
-
-                        //reset to default
-                        this.notesModel.setIsAdd(false);
-                        this.inPrice = false;
-                        return true;
-                    }
-                } else
-                {
-                    //reset to default
-                    this.notesModel.setIsAdd(false);
-                    this.inPrice = false;
-                    return false;
-                }
+//                try
+//                {
+//                    quote = this.notesModel.getTickerInfo(this.ticker.getValue());
+//                } catch (RuntimeException f)
+//                {
+//                    this.controlsHL.getButtonAddSave().setEnabled(false);
+//
+//                    return false;
+//                }
+//
+//                if (quote != null)
+//                {
+//                    this.inPrice = true;
+//
+//                    if (this.notesModel.getIsAdd())
+//                    {
+//                        //only update these on Add, not Edit
+//                        //clear data related to previous ticker
+//                        this.iPrice.setValue(0.0);
+//                        this.description.setValue("");
+//
+//                        if (quote instanceof EquityQuote equityQuote1)
+//                        {
+//                            this.iPrice.setValue((equityQuote1.getLastPrice()).doubleValue());
+//                            this.description.setValue(equityQuote1.getDescription());
+//                        }
+//
+//                        if (quote instanceof EtfQuote etfQuote1)
+//                        {
+//
+//                            this.iPrice.setValue((etfQuote1.getLastPrice()).doubleValue());
+//                            this.description.setValue(etfQuote1.getDescription());
+//                        }
+//
+//                        if (quote instanceof MutualFundQuote mfQuote1)
+//                        {
+//
+//                            this.iPrice.setValue((mfQuote1.getClosePrice()).doubleValue());
+//                            this.description.setValue(mfQuote1.getDescription());
+//                        }
+//
+//                        if (quote instanceof IndexQuote idxQuote1)
+//                        {
+//
+//                            this.iPrice.setValue((idxQuote1.getLastPrice()).doubleValue());
+//                            this.description.setValue(idxQuote1.getDescription());
+//                        }
+//
+//                        if (quote instanceof FutureQuote futureQuote1)
+//                        {
+//
+//                            this.iPrice.setValue((futureQuote1.getLastPriceInDouble()).doubleValue());
+//                            this.description.setValue(futureQuote1.getDescription());
+//                        }
+//
+//                        if (quote instanceof FutureOptionQuote futureOptionQuote1)
+//                        {
+//
+//                            this.iPrice.setValue((futureOptionQuote1.getLastPriceInDouble()).doubleValue());
+//                            this.description.setValue(futureOptionQuote1.getDescription());
+//                        }
+//
+//                        if (quote instanceof ForexQuote forexQuote1)
+//                        {
+//
+//                            this.iPrice.setValue((forexQuote1.getLastPriceInDouble()).doubleValue());
+//                            this.description.setValue(forexQuote1.getDescription());
+//                        }
+//                    }
+//
+////                    this.iPrice.setValue((equityQuote.getLastPrice()).doubleValue());
+////                    this.description.setValue(equityQuote.getDescription());
+//                    if (this.checkRequired())
+//                    {
+//                        this.controlsHL.getButtonAddSave().setEnabled(true);
+//
+//                        //reset to default
+//                        this.notesModel.setIsAdd(false);
+//                        this.inPrice = false;
+//                        return true;
+//                    }
+//                } else
+//                {
+//                    //reset to default
+//                    this.notesModel.setIsAdd(false);
+//                    this.inPrice = false;
+//                    return false;
+//                }
 
                 //reset to default
                 this.notesModel.setIsAdd(false);
