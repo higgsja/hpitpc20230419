@@ -7,24 +7,31 @@ import org.springframework.stereotype.*;
 
 @Getter
 @Service
-public class UserModelService implements UserService {//implements FilterableCrudService<User> {
+public class UserModelService implements UserService
+{//implements FilterableCrudService<User> {
 
     @Autowired private JdbcTemplate jdbcTemplate;
 
     @Override
-    public UserModel getByUserName(String userName) {
+    public UserModel getByUserName(String userName)
+    {
         String sql;
 
-        sql =
-            "select id, name, username, email, password from hlhtxc5_hpiJoomla.hpiJ_users where username=?;";
-
-        return jdbcTemplate.queryForObject(sql,
-            new Object[]{userName},
+        //get the user data from the Joomla database
+        sql
+            = "select id, name, username, email, password from hlhtxc5_hpiJoomla.hpiJ_users where username=?;";
+        UserModel userModel = jdbcTemplate.queryForObject(sql,
+            new Object[]
+            {
+                userName
+            },
             (rs, rowNum) -> new UserModel(
-            rs.getInt("id"),
-            rs.getString("name"),
-            rs.getString("username"),
-            rs.getString("email"),
-            rs.getString("password")));
+                rs.getInt("id"),
+                rs.getString("name"),
+                rs.getString("username"),
+                rs.getString("email"),
+                rs.getString("password")));
+
+        return userModel;
     }
 }

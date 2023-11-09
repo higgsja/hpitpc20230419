@@ -42,6 +42,7 @@ public class LoginView
         {
         } else
         {
+            //set dark theme
             themeList.add(Lumo.DARK);
         }
     }
@@ -51,9 +52,11 @@ public class LoginView
     {
         if (SecurityUtils.isUserLoggedIn())
         {
+            //if logged in, go to notes
             event.forwardTo(NotesMineControllerFL.class);
         } else
         {
+            //not logged in
             setI18n(I18N);
             setForgotPasswordButtonVisible(false);
             setAction(AppConst.LOGON);
