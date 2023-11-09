@@ -9,7 +9,7 @@ import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.data.provider.*;
 import com.vaadin.flow.spring.annotation.*;
 import java.util.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 

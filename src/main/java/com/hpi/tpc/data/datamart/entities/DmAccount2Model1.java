@@ -1,7 +1,7 @@
 package com.hpi.tpc.data.datamart.entities;
 
 import java.util.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import lombok.*;
 
 @AllArgsConstructor

@@ -3,7 +3,7 @@ package com.hpi.tpc.ui.views.portfolio.track;
 import com.hpi.tpc.ui.views.baseClass.*;
 import com.vaadin.flow.spring.annotation.*;
 import java.util.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 
 @UIScope
 @VaadinSessionScope

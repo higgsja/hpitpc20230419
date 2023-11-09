@@ -11,8 +11,8 @@ import com.vaadin.flow.component.grid.*;
 import com.vaadin.flow.component.orderedlayout.*;
 import com.vaadin.flow.router.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.*;
-import javax.annotation.security.*;
+import jakarta.annotation.*;
+import jakarta.annotation.security.*;
 import lombok.*;
 
 /**

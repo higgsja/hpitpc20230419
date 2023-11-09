@@ -6,7 +6,7 @@ import com.vaadin.flow.component.grid.*;
 import com.vaadin.flow.component.orderedlayout.*;
 import com.vaadin.flow.data.provider.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 import lombok.*;
 
 @UIScope

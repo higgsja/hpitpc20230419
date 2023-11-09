@@ -7,7 +7,7 @@ import java.time.*;
 import java.time.temporal.*;
 import static java.time.temporal.TemporalAdjusters.*;
 import java.util.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 
 @UIScope
 @VaadinSessionScope

@@ -1,7 +1,7 @@
 package com.hpi.tpc.data.entities;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Getter @Setter

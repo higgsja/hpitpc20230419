@@ -7,8 +7,8 @@ import com.hpi.tpc.ui.views.coaching.gains.positions.*;
 import com.hpi.tpc.ui.views.main.*;
 import com.vaadin.flow.router.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.*;
-import javax.annotation.security.*;
+import jakarta.annotation.*;
+import jakarta.annotation.security.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 

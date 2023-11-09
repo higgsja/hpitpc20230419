@@ -9,8 +9,8 @@ import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.orderedlayout.*;
 import com.vaadin.flow.component.textfield.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.*;
-import javax.annotation.security.*;
+import jakarta.annotation.*;
+import jakarta.annotation.security.*;
 import lombok.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.Component;
@@ -107,7 +107,8 @@ public class SetupEquitiesEditView
         this.statusMsgHL.setHeight("20px");
 
         //sectors
-        this.cbClientSectorModel.setItems(this.mainLayout.getClientAllSectorListModels().stream());
+//        this.cbClientSectorModel.setItems(this.mainLayout.getClientAllSectorListModels().stream());
+        this.cbClientSectorModel.setItems(this.mainLayout.getClientAllSectorListModels());
 
         //cancel
         this.buttonCancel.addClickListener(cancel -> {

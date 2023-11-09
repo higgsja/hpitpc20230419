@@ -5,7 +5,7 @@ import com.github.appreciated.apexcharts.config.*;
 import com.hpi.tpc.charts.*;
 import com.vaadin.flow.component.orderedlayout.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 import org.springframework.stereotype.Component;
 
 /**

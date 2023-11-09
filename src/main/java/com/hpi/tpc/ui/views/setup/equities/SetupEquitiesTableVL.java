@@ -4,7 +4,7 @@ import com.hpi.tpc.data.entities.*;
 import com.vaadin.flow.component.grid.*;
 import com.vaadin.flow.component.orderedlayout.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 import lombok.*;
 
 @UIScope
@@ -43,7 +43,7 @@ public class SetupEquitiesTableVL
         this.setupEquitiesGrid.addThemeVariants(GridVariant.LUMO_ROW_STRIPES);
         this.setupEquitiesGrid.setSelectionMode(Grid.SelectionMode.SINGLE);
         this.setupEquitiesGrid.setHeightFull();
-        //this.setupEquitiesGrid.setHeightByRows(true);
+        this.setupEquitiesGrid.setAllRowsVisible(true);
 
         this.setupEquitiesGrid.addColumn(ClientEquityModel::getJoomlaId)
             .setHeader("JoomlaId")

@@ -3,7 +3,7 @@ package com.hpi.tpc.ui.views.portfolio.plan.charts;
 import com.vaadin.flow.shared.*;
 import com.vaadin.flow.spring.annotation.*;
 import java.util.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 import org.springframework.beans.factory.annotation.*;
 
 /*

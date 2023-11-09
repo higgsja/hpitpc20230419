@@ -4,7 +4,7 @@ import com.hpi.tpc.data.entities.*;
 import com.vaadin.flow.component.grid.*;
 import com.vaadin.flow.component.orderedlayout.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
 import lombok.*;
 
 @UIScope
@@ -45,7 +45,7 @@ public class SetupSectorTableVL
         this.setupSectorsGrid.addThemeVariants(GridVariant.LUMO_ROW_STRIPES);
         this.setupSectorsGrid.setSelectionMode(Grid.SelectionMode.SINGLE);
         this.setupSectorsGrid.setHeightFull();
-        //this.setupSectorsGrid.setHeightByRows(true);
+        this.setupSectorsGrid.setAllRowsVisible(true);
 
         this.setupSectorsGrid.addColumn(ClientSectorModel::getJoomlaId)
             .setHeader("JoomlaId")

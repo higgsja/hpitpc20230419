@@ -1,14 +1,14 @@
 package com.hpi.tpc.ui.views.coaching.gains.chart;
 
 import com.github.appreciated.apexcharts.*;
-import com.github.appreciated.apexcharts.config.*;
 import com.hpi.tpc.charts.*;
 import com.hpi.tpc.data.entities.*;
 import com.hpi.tpc.ui.views.baseClass.*;
 import com.hpi.tpc.ui.views.coaching.gains.*;
 import com.vaadin.flow.spring.annotation.*;
 import java.text.*;
-import javax.annotation.*;
+import jakarta.annotation.*;
+import java.util.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 
@@ -32,7 +32,7 @@ public class GainsChartVL
     {
         this.getStyle().set("padding", "0px 0px 16px 5px");
 
-        this.add(this.addChart("PositionsClosed"));
+        this.add((Collection<com.vaadin.flow.component.Component>) this.addChart("PositionsClosed"));
     }
 
     public ApexCharts addChart(String dataTable)
@@ -76,7 +76,7 @@ public class GainsChartVL
 //            return this.gainsVLModel.getChart();
             chart = tornadoChart.build();
             chart.setHeight("100%");
-            chart.addClassName("coachingGainsChart");
+//            chart.addClassName("coachingGainsChart");
             return chart;
         } else
         {

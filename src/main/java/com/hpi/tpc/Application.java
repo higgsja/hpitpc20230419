@@ -4,7 +4,7 @@ import com.vaadin.flow.component.page.*;
 import com.vaadin.flow.server.*;
 import com.vaadin.flow.shared.communication.*;
 import org.springframework.boot.*;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.*;
 import org.springframework.boot.builder.*;
 import org.springframework.boot.web.servlet.support.*;
 import org.vaadin.artur.helpers.*;

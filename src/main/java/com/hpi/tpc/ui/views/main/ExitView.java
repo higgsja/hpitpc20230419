@@ -6,7 +6,7 @@ import com.vaadin.flow.component.orderedlayout.*;
 import com.vaadin.flow.router.*;
 import com.vaadin.flow.server.*;
 import com.vaadin.flow.spring.annotation.*;
-import javax.annotation.security.*;
+import jakarta.annotation.security.*;
 import org.springframework.beans.factory.annotation.*;
 
 
