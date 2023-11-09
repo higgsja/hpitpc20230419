@@ -1,0 +1,175 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------------< com.hpi:hpitpc >---------------------------
+[INFO] Building TPC 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.3.0:tree (default-cli) @ hpitpc ---
+[INFO] com.hpi:hpitpc:jar:1.0
+[INFO] +- org.junit.jupiter:junit-jupiter-api:jar:5.9.1:test
+[INFO] |  +- org.opentest4j:opentest4j:jar:1.2.0:test
+[INFO] |  +- org.junit.platform:junit-platform-commons:jar:1.9.1:test
+[INFO] |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO] +- org.junit.jupiter:junit-jupiter-engine:jar:5.9.1:test
+[INFO] |  \- org.junit.platform:junit-platform-engine:jar:1.9.1:test
+[INFO] +- com.flowingcode.vaadin.addons:twincolgrid:jar:24.2.1:compile
+[INFO] +- com.vaadin:vaadin-push:jar:8.21.0:compile
+[INFO] |  +- com.vaadin.external.atmosphere:atmosphere-runtime:jar:2.4.30.vaadin5:compile
+[INFO] |  |  +- commons-codec:commons-codec:jar:1.15:compile
+[INFO] |  |  \- com.vaadin.external.slf4j:vaadin-slf4j-jdk14:jar:1.6.1:compile
+[INFO] |  \- org.javassist:javassist:jar:3.29.2-GA:compile
+[INFO] +- org.springframework.boot:spring-boot:jar:3.0.0:compile
+[INFO] +- org.springframework:spring-beans:jar:6.0.2:compile
+[INFO] +- org.projectlombok:lombok:jar:1.18.24:compile
+[INFO] +- org.mariadb.jdbc:mariadb-java-client:jar:3.0.9:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-jdbc:jar:3.0.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:3.0.0:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:3.0.0:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:3.0.0:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.4.5:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.4.5:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.19.0:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:2.0.4:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:1.33:compile
+[INFO] |  \- com.zaxxer:HikariCP:jar:5.0.1:compile
+[INFO] |     \- org.slf4j:slf4j-api:jar:2.0.4:compile
+[INFO] +- jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile
+[INFO] +- jakarta.servlet:jakarta.servlet-api:jar:6.0.0:provided
+[INFO] +- org.springframework.boot:spring-boot-starter-data-jpa:jar:3.0.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-aop:jar:3.0.0:compile
+[INFO] |  |  \- org.aspectj:aspectjweaver:jar:1.9.9.1:compile
+[INFO] |  +- org.hibernate.orm:hibernate-core:jar:6.1.5.Final:compile
+[INFO] |  |  +- jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.5.0.Final:compile
+[INFO] |  |  +- org.hibernate.common:hibernate-commons-annotations:jar:6.0.2.Final:runtime
+[INFO] |  |  +- org.jboss:jandex:jar:2.4.2.Final:runtime
+[INFO] |  |  +- com.fasterxml:classmate:jar:1.5.1:compile
+[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.12.19:runtime
+[INFO] |  |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.0:runtime
+[INFO] |  |  |  \- jakarta.activation:jakarta.activation-api:jar:2.1.0:runtime
+[INFO] |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:4.0.1:runtime
+[INFO] |  |  |  \- org.glassfish.jaxb:jaxb-core:jar:4.0.1:runtime
+[INFO] |  |  |     +- org.eclipse.angus:angus-activation:jar:1.0.0:runtime
+[INFO] |  |  |     +- org.glassfish.jaxb:txw2:jar:4.0.1:runtime
+[INFO] |  |  |     \- com.sun.istack:istack-commons-runtime:jar:4.1.1:runtime
+[INFO] |  |  +- jakarta.inject:jakarta.inject-api:jar:2.0.0:runtime
+[INFO] |  |  \- org.antlr:antlr4-runtime:jar:4.10.1:runtime
+[INFO] |  +- org.springframework.data:spring-data-jpa:jar:3.0.0:compile
+[INFO] |  |  +- org.springframework.data:spring-data-commons:jar:3.0.0:compile
+[INFO] |  |  \- org.springframework:spring-orm:jar:6.0.2:compile
+[INFO] |  \- org.springframework:spring-aspects:jar:6.0.2:compile
+[INFO] +- org.jsoup:jsoup:jar:1.16.1:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-tomcat:jar:3.0.0:compile
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.15:compile
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.15:compile
+[INFO] |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.15:compile
+[INFO] +- com.vaadin:vaadin-core:jar:24.2.1:compile
+[INFO] |  +- com.vaadin:vaadin-core-internal:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:flow-server:jar:24.2.1:compile
+[INFO] |  |  |  +- com.vaadin.servletdetector:throw-if-servlet3:jar:1.0.2:compile
+[INFO] |  |  |  +- com.vaadin.external.gwt:gwt-elemental:jar:2.8.2.vaadin2:compile
+[INFO] |  |  |  +- org.apache.commons:commons-fileupload2-jakarta:jar:2.0.0-M1:compile
+[INFO] |  |  |  |  \- org.apache.commons:commons-fileupload2-core:jar:2.0.0-M1:compile
+[INFO] |  |  |  +- commons-io:commons-io:jar:2.13.0:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.14.1:compile
+[INFO] |  |  |  +- com.helger:ph-css:jar:7.0.1:compile
+[INFO] |  |  |  |  \- com.helger.commons:ph-commons:jar:11.1.0:compile
+[INFO] |  |  |  +- org.ow2.asm:asm:jar:9.5:compile
+[INFO] |  |  |  +- com.vaadin.external:gentyref:jar:1.2.0.vaadin1:compile
+[INFO] |  |  |  \- org.apache.commons:commons-compress:jar:1.24.0:compile
+[INFO] |  |  +- com.vaadin:flow-lit-template:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:flow-push:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:flow-client:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:flow-html-components:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:flow-data:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:flow-dnd:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-lumo-theme:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-material-theme:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-accordion-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-avatar-flow:jar:24.2.1:compile
+[INFO] |  |  |  \- com.vaadin:vaadin-flow-components-base:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-button-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-checkbox-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-combo-box-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-confirm-dialog-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-custom-field-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-date-picker-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-date-time-picker-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-details-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-time-picker-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-select-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-side-nav-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-dialog-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-form-layout-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-field-highlighter-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-grid-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-icons-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-virtual-list-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-list-box-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-login-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-messages-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-ordered-layout-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-progress-bar-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-radio-button-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-renderer-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-split-layout-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-tabs-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-text-field-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-upload-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-notification-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-app-layout-flow:jar:24.2.1:compile
+[INFO] |  |  +- com.vaadin:vaadin-context-menu-flow:jar:24.2.1:compile
+[INFO] |  |  \- com.vaadin:vaadin-menu-bar-flow:jar:24.2.1:compile
+[INFO] |  \- com.vaadin:vaadin-dev:jar:24.2.1:compile
+[INFO] |     +- com.vaadin:vaadin-dev-server:jar:24.2.1:compile
+[INFO] |     |  +- com.vaadin:license-checker:jar:1.12.3:compile
+[INFO] |     |  |  +- com.github.oshi:oshi-core:jar:6.4.1:compile
+[INFO] |     |  |  |  +- net.java.dev.jna:jna:jar:5.13.0:compile
+[INFO] |     |  |  |  \- net.java.dev.jna:jna-platform:jar:5.13.0:compile
+[INFO] |     |  |  +- com.nimbusds:nimbus-jose-jwt:jar:9.31:compile
+[INFO] |     |  |  \- org.lucee:jcip-annotations:jar:1.0.0:compile
+[INFO] |     |  +- com.vaadin:open:jar:8.5.0:compile
+[INFO] |     |  +- com.github.javaparser:javaparser-core:jar:3.25.5:compile
+[INFO] |     |  \- io.methvin:directory-watcher:jar:0.18.0:compile
+[INFO] |     \- com.vaadin:vaadin-dev-bundle:jar:24.2.1:compile
+[INFO] +- com.vaadin:vaadin-spring-boot-starter:jar:24.2.1:compile
+[INFO] |  \- com.vaadin:vaadin-spring:jar:24.2.1:compile
+[INFO] |     +- org.springframework:spring-websocket:jar:6.0.2:compile
+[INFO] |     +- org.hibernate.validator:hibernate-validator:jar:8.0.0.Final:compile
+[INFO] |     |  \- jakarta.validation:jakarta.validation-api:jar:3.0.2:compile
+[INFO] |     \- org.reflections:reflections:jar:0.10.2:compile
+[INFO] |        \- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:3.0.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:3.0.0:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.14.1:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.14.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.14.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.14.1:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.14.1:compile
+[INFO] |  +- org.springframework:spring-web:jar:6.0.2:compile
+[INFO] |  |  \- io.micrometer:micrometer-observation:jar:1.10.2:compile
+[INFO] |  |     \- io.micrometer:micrometer-commons:jar:1.10.2:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:6.0.2:compile
+[INFO] +- jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile
+[INFO] +- org.springframework:spring-core:jar:6.0.2:compile
+[INFO] |  \- org.springframework:spring-jcl:jar:6.0.2:compile
+[INFO] +- org.springframework:spring-context:jar:6.0.2:compile
+[INFO] |  +- org.springframework:spring-aop:jar:6.0.2:compile
+[INFO] |  \- org.springframework:spring-expression:jar:6.0.2:compile
+[INFO] +- org.apache.commons:commons-lang3:jar:3.12.0:compile
+[INFO] +- org.springframework:spring-jdbc:jar:6.0.2:compile
+[INFO] |  \- org.springframework:spring-tx:jar:6.0.2:compile
+[INFO] +- com.github.appreciated:apexcharts:jar:24.2.1:compile
+[INFO] +- org.apache.logging.log4j:log4j-api:jar:2.19.0:compile
+[INFO] +- org.vaadin.artur:a-vaadin-helper:jar:1.9.0:compile
+[INFO] |  \- org.vaadin.artur:spring-data-provider:jar:2.1.0:compile
+[INFO] +- org.springframework.security:spring-security-web:jar:6.0.0:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:6.0.0:compile
+[INFO] |     \- org.springframework.security:spring-security-crypto:jar:6.0.0:compile
+[INFO] \- org.springframework.security:spring-security-config:jar:6.0.0:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.030 s
+[INFO] Finished at: 2023-11-09T15:10:35-06:00
+[INFO] ------------------------------------------------------------------------
